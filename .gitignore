@@ -3,6 +3,10 @@
 # Generated data (contains mock PII)
 data/
 exports/
+logs/
+
+# Credentials (sensitive)
+.env
 
 # Python
 __pycache__/
