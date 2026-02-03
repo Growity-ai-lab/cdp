@@ -43,12 +43,17 @@ python main.py help        # Yardım
 ```
 cdp/
 ├── main.py                     # Ana CLI uygulaması
+├── app.py                      # Streamlit dashboard
 ├── requirements.txt            # Python bağımlılıkları
 ├── src/
 │   ├── __init__.py
 │   ├── generate_mock_data.py   # Mock veri oluşturucu
 │   ├── segment_engine.py       # Segmentasyon motoru
 │   └── platform_export.py      # Platform export modülü
+├── pages/                      # Streamlit sayfaları
+│   ├── 1_Müşteri_Analizi.py   # Müşteri analizi sayfası
+│   ├── 2_Segment_Builder.py   # Segment builder sayfası
+│   └── 3_Export.py            # Export sayfası
 ├── data/                       # Oluşturulan veriler (gitignore)
 ├── exports/                    # Export dosyaları (gitignore)
 ├── docs/
@@ -178,6 +183,21 @@ print(f"Toplam gelir: {stats['total_revenue']:,.0f} TL")
 - ✅ Ham veri hiçbir platforma gönderilmez
 - ✅ Audit trail için export raporları oluşturulur
 
+## 🖥️ Dashboard (v0.4)
+
+Streamlit tabanlı görsel arayüz ile CDP'yi kullanın:
+
+```bash
+# Dashboard'u başlat
+streamlit run app.py
+```
+
+**Sayfalar:**
+- 📊 **Ana Sayfa** - KPI'lar, genel bakış, günlük trendler
+- 👥 **Müşteri Analizi** - Demografik dağılım, RFM analizi, filtreler
+- 🎯 **Segment Builder** - Hazır segmentler, özel segment oluşturma, karşılaştırma
+- 📤 **Export** - Platform export, toplu export, geçmiş yönetimi
+
 ## 🔜 Yol Haritası
 
 ### v0.2 - API Entegrasyonu
@@ -190,10 +210,10 @@ print(f"Toplam gelir: {stats['total_revenue']:,.0f} TL")
 - [ ] Real-time segment güncelleme
 - [ ] Incremental sync
 
-### v0.4 - Dashboard
-- [ ] Streamlit görsel arayüz
-- [ ] Segment builder UI
-- [ ] Analytics dashboard
+### v0.4 - Dashboard ✅
+- [x] Streamlit görsel arayüz
+- [x] Segment builder UI
+- [x] Analytics dashboard
 
 ### v1.0 - Production
 - [ ] PostgreSQL/BigQuery desteği
