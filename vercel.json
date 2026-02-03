@@ -1,33 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/*.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
-    }
+    { "src": "api/*.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    }
-  ],
-  "env": {
-    "META_APP_ID": "@meta_app_id",
-    "META_APP_SECRET": "@meta_app_secret",
-    "META_ACCESS_TOKEN": "@meta_access_token",
-    "META_AD_ACCOUNT_ID": "@meta_ad_account_id",
-    "TIKTOK_APP_ID": "@tiktok_app_id",
-    "TIKTOK_SECRET": "@tiktok_secret",
-    "TIKTOK_ACCESS_TOKEN": "@tiktok_access_token",
-    "TIKTOK_ADVERTISER_ID": "@tiktok_advertiser_id"
-  }
+    { "src": "/api/(.*)", "dest": "/api/$1.py" }
+  ]
 }
