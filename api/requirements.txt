@@ -1,0 +1,3 @@
+# Vercel API functions - minimal dependencies
+# Ana requirements.txt'den bağımsız
+# API sadece Python standart kütüphanelerini kullanıyor
